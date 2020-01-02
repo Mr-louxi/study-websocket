@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var path = document.location.pathname;
+        var ctx = path.substr(0, path.substr(1).indexOf("/") + 1);
+    </script>
+    <script type="text/javascript" src="../js/jquery/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="../js/kafkaproductTest.js"></script>
+</head>
+<body>
+    <div style="text-align: left;">
+        <form action="">
+            <input onclick="sendKafka();" value="发送数据" type="button"/>
+            <input id="testID" name="message" value="Hello Web Socket" type="text">
+            <br/>
+        </form>
+    </div>
+    <div id="output"></div>
+</body>
+</html>
